@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<RootNamespace>PeterJuhasz.Logging.File</RootNamespace>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<VersionPrefix>1.0.0</VersionPrefix>
+		<PackageId>PeterJuhasz.Logging.File</PackageId>
+		<Description>High performance, lock-free file logger for Microsoft.Extensions.Logging, which writes one file per application instance.</Description>
+		<PackageTags>logging;file;logger;microsoft.extensions.logging;high-performance;aot</PackageTags>
+		<PackageProjectUrl>https://github.com/Peter-Juhasz/logger</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/Peter-Juhasz/logger</RepositoryUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<IsTrimmable>true</IsTrimmable>
+		<IsAotCompatible>true</IsAotCompatible>
+		<EnableTrimAnalyzer>true</EnableTrimAnalyzer>
+		<EnableSingleFileAnalyzer>true</EnableSingleFileAnalyzer>
+		<EnableAotAnalyzer>true</EnableAotAnalyzer>
+		<InvariantGlobalization>true</InvariantGlobalization>
+		<EnableUnsafeBinaryFormatterSerialization>false</EnableUnsafeBinaryFormatterSerialization>
+		<EnableUnsafeUTF7Encoding>false</EnableUnsafeUTF7Encoding>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	</PropertyGroup>
+	<PropertyGroup Condition="$(Configuration) == 'Release'">
+		<TrimmerRemoveSymbols>true</TrimmerRemoveSymbols>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\..\README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Logging" Version="11.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Using Include="Microsoft.Extensions.Logging" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<InternalsVisibleTo Include="PeterJuhasz.Logging.File.Tests" />
+		<InternalsVisibleTo Include="PeterJuhasz.Logging.File.Benchmarks" />
+	</ItemGroup>
+
+</Project>

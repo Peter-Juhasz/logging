@@ -1,0 +1,21 @@
+﻿<Project>
+	<PropertyGroup>
+		<TargetFramework>net11.0</TargetFramework>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
+		<EnableNETAnalyzers>true</EnableNETAnalyzers>
+		<AnalysisLevel>latest-all</AnalysisLevel>
+		<AnalysisMode>All</AnalysisMode>
+		<EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+		<MSTestAnalysisMode>All</MSTestAnalysisMode>
+		<AccelerateBuildsInVisualStudio>true</AccelerateBuildsInVisualStudio>
+		<LangVersion>latest</LangVersion>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Features>$(Features);runtime-async=on;strict</Features>
+		<WarningsAsErrors>$(WarningsAsErrors);CA2016</WarningsAsErrors>
+		<WarningLevel>9999</WarningLevel>
+		<Deterministic>true</Deterministic>
+		<RestoreUseStaticGraphEvaluation>true</RestoreUseStaticGraphEvaluation>
+	</PropertyGroup>
+</Project>

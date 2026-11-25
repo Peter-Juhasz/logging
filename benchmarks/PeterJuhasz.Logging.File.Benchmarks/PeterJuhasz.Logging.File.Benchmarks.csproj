@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<IsPackable>false</IsPackable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="BenchmarkDotNet" Version="0.16.0-preview.2" />
+		<PackageReference Include="NLog.Extensions.Logging" Version="6.3.0" />
+		<PackageReference Include="Serilog.Extensions.Logging" Version="11.0.0" />
+		<PackageReference Include="Serilog.Sinks.Async" Version="2.1.0" />
+		<PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\src\PeterJuhasz.Logging.File\PeterJuhasz.Logging.File.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Using Include="Microsoft.Extensions.Logging" />
+	</ItemGroup>
+
+</Project>

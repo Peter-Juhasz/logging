@@ -1,0 +1,5 @@
+﻿<Solution>
+  <Project Path="src/PeterJuhasz.Logging.File/PeterJuhasz.Logging.File.csproj" />
+  <Project Path="tests/PeterJuhasz.Logging.File.Tests/PeterJuhasz.Logging.File.Tests.csproj" />
+  <Project Path="benchmarks/PeterJuhasz.Logging.File.Benchmarks/PeterJuhasz.Logging.File.Benchmarks.csproj" />
+</Solution>
